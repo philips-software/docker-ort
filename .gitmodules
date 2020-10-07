@@ -1,0 +1,3 @@
+[submodule "latest/ort"]
+	path = latest/ort
+	url = https://github.com/oss-review-toolkit/ort.git

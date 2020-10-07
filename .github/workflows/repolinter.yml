@@ -1,0 +1,13 @@
+name: repolinter
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2 
+    - name: Run a repolinter
+      uses: philips-labs/github-action-repolinter@master
