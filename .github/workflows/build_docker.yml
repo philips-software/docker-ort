@@ -12,12 +12,10 @@ jobs:
       with:
         submodules: recursive
 
-    - run: cd latest/ort
-
     - name: Build Docker Images with Oss Review Toolkit 
-      uses: philips-software/docker-ci-scripts@v3.1.0
+      uses: philips-software/docker-ci-scripts@v2.2.2
       with:
-        dockerfile: .
+        dockerfile: latest/ort
         image-name: ort
         tags: latest 2020-10-07
       env:
