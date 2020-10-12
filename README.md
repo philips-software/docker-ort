@@ -38,7 +38,7 @@ This contains all the similar tags at the point of creation.
 
 ```
 $ docker run philipssoftware/ort cat TAGS
-ort:latest ort:2020-10-07
+ort:latest ort:2020-10-12
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `tern` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.

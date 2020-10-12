@@ -17,7 +17,7 @@ jobs:
       with:
         dockerfile: latest/ort
         image-name: ort
-        tags: latest 2020-10-07
+        tags: latest 2020-10-12
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
