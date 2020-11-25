@@ -2,6 +2,12 @@ on: [push]
 
 name: Build Docker images
 
+env:
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
+  DOCKER_ORGANIZATION: philipssoftware
+  GITHUB_ORGANIZATION: philips-software
+
 jobs:
   build_ort:
     name: ort
@@ -13,13 +19,8 @@ jobs:
         submodules: recursive
 
     - name: Build Docker Images with Oss Review Toolkit 
-      uses: philips-software/docker-ci-scripts@v2.2.2
+      uses: philips-software/docker-ci-scripts@v3.1.0
       with:
         dockerfile: latest/ort
         image-name: ort
-        tags: latest 2020-10-12
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
+        tags: latest 2020-11-25
