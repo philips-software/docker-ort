@@ -18,7 +18,7 @@ jobs:
       with:
         submodules: recursive
     - name: Docker
-       run: |
+      run: |
         echo $'{\n    "experimental": true\n}' | sudo tee /etc/docker/daemon.json
         sudo service docker restart
     - name: Build Docker Images with Oss Review Toolkit 
