@@ -19,8 +19,11 @@ jobs:
         submodules: recursive
     - name: Docker
       run: |
+        docker version -f '{{.Server.Experimental}}'
         echo $'{\n    "experimental": true\n}' | sudo tee /etc/docker/daemon.json
         sudo service docker restart
+        docker version -f '{{.Server.Experimental}}'
+        export DOCKER_CLI_EXPERIMENTAL=enabled
     - name: Build Docker Images with Oss Review Toolkit 
       uses: philips-software/docker-ci-scripts@v3.1.0
       with:
