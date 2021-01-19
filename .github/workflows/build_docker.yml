@@ -26,4 +26,4 @@ jobs:
       with:
         dockerfile: latest/ort
         image-name: ort
-        tags: latest 2020-11-25
+        tags: latest 2021-01-19
