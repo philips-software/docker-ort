@@ -12,11 +12,14 @@ jobs:
   build_ort:
     name: ort
     runs-on: ubuntu-latest
+    container: docker:latest
 
     steps:
     - uses: actions/checkout@v2.3.3
       with:
         submodules: recursive
+    - name: check version docker
+      run: docker --version
     - name: Build Docker Images with Oss Review Toolkit 
       uses: philips-software/docker-ci-scripts@update-docker
       with:
