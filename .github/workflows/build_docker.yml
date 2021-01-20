@@ -19,7 +19,7 @@ jobs:
       with:
         submodules: recursive
     - name: check version docker
-      run: docker --version
+      run: docker version
     - name: Build Docker Images with Oss Review Toolkit 
       uses: philips-software/docker-ci-scripts@update-docker
       with:
