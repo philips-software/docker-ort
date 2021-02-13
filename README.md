@@ -38,7 +38,7 @@ This contains all the similar tags at the point of creation.
 
 ```
 $ docker run philipssoftware/ort cat TAGS
-ort:latest ort:2020-10-12
+ort:latest ort:2021-02-13
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `tern` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -51,6 +51,10 @@ ORT does not release their product with versions / tags. We want to be able to a
 By including [ORT](https://github.com/oss-review-toolkit/ort) as a git submodule, we pin the version down to a certain commit-sha.
 
 That's why we want our own docker file definitions.
+
+## Future
+
+ORT is going to provide a docker image as well. Then this repository will be redundant. See [issue on ORT](https://github.com/oss-review-toolkit/ort/issues/2441)
 
 ## Issues
 
