@@ -18,7 +18,7 @@ jobs:
       with:
         submodules: recursive
     - name: Build Docker Images with Oss Review Toolkit 
-      uses: philips-software/docker-ci-scripts@v3.2.0
+      uses: philips-software/docker-ci-scripts@v3.2.1
       with:
         dockerfile: latest/ort
         image-name: ort
