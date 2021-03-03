@@ -18,7 +18,7 @@ docker run -v /workspace:/project philipssoftware/ort --info analyze -f JSON -i 
 
 ## Content
 
-The images obviously contains Tern, but also two other files:
+The images obviously contains ORT, but also two other files:
 - `REPO`
 - `TAGS`
 
@@ -41,7 +41,7 @@ $ docker run philipssoftware/ort cat TAGS
 ort:latest ort:2021-02-13
 ```
 
-You can use this to pin down a version of the container from an existing development build for production. When using `tern` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
+You can use this to pin down a version of the container from an existing development build for production. When using `ort` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
 
 ## Why
 
