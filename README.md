@@ -43,6 +43,8 @@ ort:latest ort:2021-02-13
 
 You can use this to pin down a version of the container from an existing development build for production. When using `ort` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
 
+Version 2021-03-03 : [ORT commit: e25caa3917bb631f25390f5c027c495fc5350e06](https://github.com/oss-review-toolkit/ort/tree/e25caa3917bb631f25390f5c027c495fc5350e06)
+
 ## Why
 
 > Why do we have our own docker image definitions?
