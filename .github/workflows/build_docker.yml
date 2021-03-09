@@ -23,3 +23,14 @@ jobs:
         dockerfile: latest/ort
         image-name: ort
         tags: latest 2021-03-03
+
+    - uses: philips-labs/tern-action@tern-latest
+      id: scan
+      with:
+        image: philipssoftware/ort:2021-03-03
+        format: json
+        output: ort-2021-03-03.json
+    - uses: actions/upload-artifact@v2
+      with:
+        name: tern
+        path: ${{ steps.scan.outputs.file }}
