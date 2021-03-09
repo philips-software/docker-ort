@@ -24,7 +24,7 @@ jobs:
         image-name: ort
         tags: latest 2021-03-03
 
-    - uses: philips-labs/tern-action@v1.2.0
+    - uses: philips-labs/tern-action@tern-latest
       id: scan
       with:
         image: philipssoftware/ort:2021-03-03
