@@ -29,7 +29,7 @@ jobs:
       with:
         image: philipssoftware/ort:2021-03-03
         format: json
-        output: node-2021-03-03.json
+        output: ort-2021-03-03.json
     - uses: actions/upload-artifact@v2
       with:
         name: tern
