@@ -20,8 +20,6 @@ jobs:
         submodules: recursive
     - name: Set version
       run: |
-        chmod +x bin/check-tracked-repo.sh
-        repo=$(bin/check-tracked-repo.sh data/checked-repos.txt ${{env.TARGET_REPO}})
         echo "::set-output name=ORT_VERSION::$(git describe --abbrev=7 --always --tags --dirty)"
     - name: Build Docker Images with Oss Review Toolkit 
       uses: philips-software/docker-ci-scripts@v3.3.1
