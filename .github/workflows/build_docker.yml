@@ -24,4 +24,4 @@ jobs:
         dockerfile: Dockerfile
         base-dir: latest/ort
         image-name: ort
-        tags: latest 2021-11-24 98d49817ea7235cdfce42ac169b4bc96e9e7ecae
+        tags: latest 2021-12-23 387194c5733a836269df5383baf873f5a06194b4
