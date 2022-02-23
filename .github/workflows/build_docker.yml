@@ -8,6 +8,9 @@ env:
   DOCKER_ORGANIZATION: philipssoftware
   GITHUB_ORGANIZATION: philips-software
   DOCKER_BUILDKIT: 1
+  COSIGN_PRIVATE_KEY: '${{ secrets.COSIGN_PRIVATE_KEY }}'
+  COSIGN_PASSWORD: '${{ secrets.COSIGN_PASSWORD }}'
+  COSIGN_PUBLIC_KEY: '${{ secrets.COSIGN_PUBLIC_KEY }}'
 
 jobs:
   build_ort:
@@ -19,9 +22,12 @@ jobs:
       with:
         submodules: recursive
     - name: Build Docker Images with Oss Review Toolkit 
-      uses: philips-software/docker-ci-scripts@v3.3.1
+      uses: philips-software/docker-ci-scripts@v4.1.2
       with:
-        dockerfile: Dockerfile
+        dockerfile: . 
         base-dir: latest/ort
         image-name: ort
         tags: latest 2021-12-23 387194c5733a836269df5383baf873f5a06194b4
+        sign: true
+        slsa-provenance: true
+        sbom: true
