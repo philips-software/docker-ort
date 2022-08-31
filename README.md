@@ -1,3 +1,5 @@
+> :warning: This repo is archived.
+
 # docker-ort
 
 ![Build Docker images](https://github.com/philips-software/docker-ort/workflows/Build%20Docker%20images/badge.svg)
